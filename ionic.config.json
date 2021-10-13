@@ -1,0 +1,7 @@
+{
+  "name": "loli",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
