@@ -69,7 +69,7 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>Inbox</IonListHeader>
+          <IonListHeader>Loli</IonListHeader>
           <IonNote>hi@ionicframework.com</IonNote>
           {appPages.map((appPage, index) => {
             return (
