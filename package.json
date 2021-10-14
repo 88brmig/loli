@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "^3.2.5",
     "@capacitor/app": "1.0.3",
-    "@capacitor/core": "3.2.4",
+    "@capacitor/core": "^3.2.4",
     "@capacitor/haptics": "1.1.0",
+    "@capacitor/ios": "^3.2.5",
     "@capacitor/keyboard": "1.1.0",
     "@capacitor/status-bar": "1.0.3",
     "@craco/craco": "^6.3.0",
@@ -66,7 +68,7 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "3.2.4",
+    "@capacitor/cli": "^3.2.4",
     "autoprefixer": "^9.8.8",
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16"
