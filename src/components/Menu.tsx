@@ -1,4 +1,6 @@
 import {
+  IonAvatar,
+  IonCol,
   IonContent,
   IonIcon,
   IonItem,
@@ -8,10 +10,12 @@ import {
   IonMenu,
   IonMenuToggle,
   IonNote,
+  IonRow,
+  IonText,
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { clipboard, clipboardOutline, notifications, notificationsOutline, settings, settingsOutline, chatbubble, chatbubbleOutline, personCircleOutline, busOutline, bus, personCircle } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -23,44 +27,44 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'Inbox',
+    title: 'TABLERO',
     url: '/page/Inbox',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
+    iosIcon: clipboard,
+    mdIcon: clipboardOutline
   },
   {
-    title: 'Outbox',
+    title: 'PERFIL',
     url: '/page/Outbox',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp
+    iosIcon: personCircle,
+    mdIcon: personCircleOutline
   },
   {
-    title: 'Favorites',
+    title: 'SERVICIOS',
     url: '/page/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
+    iosIcon: chatbubble,
+    mdIcon: chatbubbleOutline
   },
   {
-    title: 'Archived',
+    title: 'NOTIFICACIONES',
     url: '/page/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
+    iosIcon: notifications,
+    mdIcon: notificationsOutline
   },
+  /* No encontre un icono mas parecido a un camión */
   {
-    title: 'Trash',
+    title: 'VEHÍCULO',
     url: '/page/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp
+    iosIcon: bus,
+    mdIcon: busOutline
   },
   {
-    title: 'Spam',
+    title: 'AYUDA',
     url: '/page/Spam',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp
+    iosIcon: settings,
+    mdIcon: settingsOutline
   }
 ];
 
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
 const Menu: React.FC = () => {
   const location = useLocation();
@@ -69,8 +73,12 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>Loli</IonListHeader>
-          <IonNote>hi@ionicframework.com</IonNote>
+          <IonListHeader class="center-items">
+            <IonIcon ios="arrowBack" md="arrowcBackOutline"></IonIcon>
+            <IonAvatar class="h-50 w-50"><img src="https://images.mediotiempo.com/-LRq2YjqT0LKNJGt6eXTY8zfFvs=/958x596/uploads/media/2021/09/10/el-trabajo-de-trailero-es.jpg"></img></IonAvatar>
+          </IonListHeader>
+          <IonText>Username</IonText><br/>
+          <IonText >cliente/chofer</IonText>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
@@ -81,16 +89,6 @@ const Menu: React.FC = () => {
               </IonMenuToggle>
             );
           })}
-        </IonList>
-
-        <IonList id="labels-list">
-          <IonListHeader>Labels</IonListHeader>
-          {labels.map((label, index) => (
-            <IonItem lines="none" key={index}>
-              <IonIcon slot="start" icon={bookmarkOutline} />
-              <IonLabel>{label}</IonLabel>
-            </IonItem>
-          ))}
         </IonList>
       </IonContent>
     </IonMenu>
