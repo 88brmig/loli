@@ -1,5 +1,6 @@
 import {
   IonAvatar,
+  IonButton,
   IonCol,
   IonContent,
   IonIcon,
@@ -73,12 +74,20 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader class="center-items">
-            <IonIcon ios="arrowBack" md="arrowcBackOutline"></IonIcon>
-            <IonAvatar class="h-50 w-50"><img src="https://images.mediotiempo.com/-LRq2YjqT0LKNJGt6eXTY8zfFvs=/958x596/uploads/media/2021/09/10/el-trabajo-de-trailero-es.jpg"></img></IonAvatar>
-          </IonListHeader>
-          <IonText>Username</IonText><br/>
-          <IonText >cliente/chofer</IonText>
+          <div className="pl-4"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          </div>
+          <div className="flex flex-wrap justify-center grid grid-rows-1">
+          
+            <IonAvatar class="h-40 w-40"><img className="h-40 w-40" src="https://images.mediotiempo.com/-LRq2YjqT0LKNJGt6eXTY8zfFvs=/958x596/uploads/media/2021/09/10/el-trabajo-de-trailero-es.jpg"></img></IonAvatar>
+          
+          <div className="grid justify-center">
+            <IonText class="text-center font-semibold">Username</IonText>
+            <IonText class="text-center">cliente/chofer</IonText>
+          </div>
+          </div>
+          
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
@@ -90,6 +99,9 @@ const Menu: React.FC = () => {
             );
           })}
         </IonList>
+        <div className="flex flex-wrap justify-end">
+          <IonButton className="content-end normal-case" shape="round" size="small">Cerrar Sesión</IonButton>
+        </div>
       </IonContent>
     </IonMenu>
   );

@@ -21,7 +21,7 @@ const Page: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">{name}</IonTitle>
+            <IonTitle color="light" size="large">{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name={name} />
