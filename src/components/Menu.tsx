@@ -1,8 +1,10 @@
 import {
   IonAvatar,
+  IonBackButton,
   IonButton,
-  IonCol,
+  IonButtons,
   IonContent,
+  IonFabButton,
   IonIcon,
   IonItem,
   IonLabel,
@@ -10,8 +12,6 @@ import {
   IonListHeader,
   IonMenu,
   IonMenuToggle,
-  IonNote,
-  IonRow,
   IonText,
 } from '@ionic/react';
 
@@ -69,19 +69,17 @@ const appPages: AppPage[] = [
 
 const Menu: React.FC = () => {
   const location = useLocation();
-
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <div className="pl-4"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="pl-4">
+          <IonButton  menu-close href="/" fill="clear"><svg xmlns="http://www.w3.org/2000/svg" className="stroke-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
+          </svg></IonButton>
           </div>
           <div className="flex flex-wrap justify-center grid grid-rows-1">
-          
-            <IonAvatar class="h-40 w-40"><img className="h-40 w-40" src="https://images.mediotiempo.com/-LRq2YjqT0LKNJGt6eXTY8zfFvs=/958x596/uploads/media/2021/09/10/el-trabajo-de-trailero-es.jpg"></img></IonAvatar>
-          
+            <IonAvatar class="h-35 w-35 m-5"><img src="https://verdes.info/wp-content/uploads/2014/05/putin-el-rey-y-el-oso-300x300.jpg"></img></IonAvatar>
           <div className="grid justify-center">
             <IonText class="text-center font-semibold">Username</IonText>
             <IonText class="text-center">cliente/chofer</IonText>
@@ -100,7 +98,7 @@ const Menu: React.FC = () => {
           })}
         </IonList>
         <div className="flex flex-wrap justify-end">
-          <IonButton className="content-end normal-case" shape="round" size="small">Cerrar Sesión</IonButton>
+          <IonButton className="content-end normal-case" fill="clear" shape="round" size="small">Cerrar Sesión</IonButton>
         </div>
       </IonContent>
     </IonMenu>
