@@ -74,18 +74,24 @@ const Menu: React.FC = () => {
       <IonContent>
         <IonList id="inbox-list">
           <div className="pl-4">
-          <IonButton  menu-close href="/" fill="clear"><svg xmlns="http://www.w3.org/2000/svg" className="stroke-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg></IonButton>
+            <IonMenuToggle>
+              <IonButton menu-close fill="clear">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 stroke-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+              </IonButton>
+            </IonMenuToggle>
           </div>
-          <div className="flex flex-wrap justify-center grid grid-rows-1">
-            <IonAvatar class="h-35 w-35 m-5"><img src="https://verdes.info/wp-content/uploads/2014/05/putin-el-rey-y-el-oso-300x300.jpg"></img></IonAvatar>
-          <div className="grid justify-center">
-            <IonText class="text-center font-semibold">Username</IonText>
-            <IonText class="text-center">cliente/chofer</IonText>
+          <div className="flex flex-col">
+            <IonAvatar class="justify-center mx-auto h-35 w-35">
+              <img src="https://verdes.info/wp-content/uploads/2014/05/putin-el-rey-y-el-oso-300x300.jpg"></img>
+            </IonAvatar>
+            <div className="grid justify-center">
+              <IonText class="font-semibold text-center">Username</IonText>
+              <IonText class="text-center">cliente/chofer</IonText>
+            </div>
           </div>
-          </div>
-          
+
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
