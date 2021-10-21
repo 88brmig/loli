@@ -1,10 +1,8 @@
-
+import { DriverStats } from "../components"
 
 const Home: React.FC = () => {
     return (
-        <div>
-            
-        </div>
+        <DriverStats name="Bryan Mora" />
     )
 }
 

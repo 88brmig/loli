@@ -1,21 +1,40 @@
-import { IonAvatar } from "@ionic/react"
+import { IonCard, IonCardTitle, IonCardSubtitle, IonCardHeader, IonCardContent, IonAvatar, IonToggle } from "@ionic/react"
+import { useState } from "react"
+import defaultImage from '../assets/img/mlnmsk.jpeg'
+import "./styles/DriverStats.css"
 
 type props = {
     photo?: string,
     name: string,
 }
 
-const DriverStats = ({ photo, name}: props) => {
+export const DriverStats = ({ photo, name }: props) => {
+    const [online, setOnline] = useState(false)
+
     return (
-        <div className="flex p-4 w-full h-48 bg-white">
-            <div className="p-2 w-1/3">
-                <IonAvatar>
-                    <img className="w-36 h-36 rounded-full" src={ photo } alt="" />
-                </IonAvatar>
-            </div>
-            <div></div>
-        </div>
+            <IonCard className="flex h-48 bg-white rounded-none">
+                <IonCardHeader className="p-0 w-1/3">
+                    <IonAvatar>
+                        <img src={photo ?? defaultImage} alt="" />
+                    </IonAvatar>
+                </IonCardHeader>
+                <IonCardContent className="flex flex-col place-content-between w-2/3">
+                    <IonCardTitle color="light">
+                        {name}
+                    </IonCardTitle>
+                    <div id="driverStats" className='flex flex-row justify-between' style={{ justifyContent: 'space-around' }}>
+                        <div className="flex flex-col">
+                            <IonCardTitle color="light">166</IonCardTitle>
+                            <IonCardSubtitle>Rutas</IonCardSubtitle>
+                        </div>
+                        <div className='flex flex-col'>
+                            <IonToggle color="secondary" onIonChange={() => setOnline(!online)} />
+                            <IonCardSubtitle color="primary">
+                                {!online ? 'En Linea' : 'Fuera de Linea'}
+                            </IonCardSubtitle>
+                        </div>
+                    </div>
+                </IonCardContent>
+            </IonCard>
     )
 }
-
-export default DriverStats
