@@ -8,20 +8,52 @@ ion-card-header {
 
 ion-avatar {
     margin: 0 0 0 1em;
+    padding: 1em;
     display: flex;
     width: 100%;
     height: 100%;
 }
 
 ion-avatar img {
-    align-self: center;
+    align-self: center ;
+}
+
+ion-card-content ion-card-title {
+    margin: auto 0;
+    font-size: large;
 }
 
 ion-card-content {
-    padding: 2em 0;
-    justify-content: space-between;
+    padding: 50px 0;
+    justify-content: flex-end;
+}
+
+ion-toggle {
+    margin: 0 auto;
+}
+
+ion-card-subtitle {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.routes {
+    justify-content: flex-end;   
+}
+
+.online {
+    width: 60%;
+}
+
+#driverStats {
+    width: 100%;
 }
 
 #driverStats:first-child {
     justify-content: flex-end;
+    min-width: 50%;
+}
+
+#driverStats:nth-last-child() {
+    min-width: 50%;
 }
