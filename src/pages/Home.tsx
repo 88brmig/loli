@@ -1,12 +1,13 @@
 import { IonPage } from "@ionic/react"
-import { DriverStats, TripTime } from "../components"
+import { DriverStats, TripTime, StatusCircle } from "../components"
 
 const Home: React.FC = () => {
     return (
-        <IonPage>
+        <>
             <DriverStats name="Bryan Mora" />
             <TripTime />
-        </IonPage>
+            <StatusCircle/>
+        </>
     )
 }
 

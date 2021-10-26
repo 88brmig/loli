@@ -1,3 +1,15 @@
-ion-card {
-    height: 3em;
+ion-button { 
+    @apply px-0 mx-0 w-full h-12 bg-white shadow-lg;
+}
+
+ion-card-title {
+     @apply text-gray-500; 
+}
+/*
+#dynamicBtn {
+    @apply font-semibold text-red-500;
+}
+*/
+#dynamicBtn ion-icon {
+    @apply mr-2;
 }

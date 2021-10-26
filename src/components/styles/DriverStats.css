@@ -1,5 +1,5 @@
 ion-card {
-    height: 20% !important;
+    @apply h-1/5 m-0 w-full !important;
 }
 
 ion-card-header {
@@ -7,11 +7,11 @@ ion-card-header {
 }
 
 ion-avatar {
-    margin: 0 0 0 1em;
+    margin: 0.5em 0.3em;
     padding: 1em;
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
 }
 
 ion-avatar img {
@@ -20,11 +20,11 @@ ion-avatar img {
 
 ion-card-content ion-card-title {
     margin: auto 0;
-    font-size: large;
+    @apply text-2xl font-semibold gap-3 !important;
 }
 
 ion-card-content {
-    padding: 50px 0;
+    padding: 0;
     justify-content: flex-end;
 }
 

@@ -12,7 +12,7 @@ export const DriverStats = ({ photo, name }: props) => {
     const [online, setOnline] = useState(false)
 
     return (
-            <IonCard className="flex h-48 bg-white shadow-lg">
+            <IonCard className="flex h-48 bg-white shadow-none">
                 <IonCardHeader className="p-0 w-1/3">
                     <IonAvatar>
                         <img src={photo ?? defaultImage} alt="" />
