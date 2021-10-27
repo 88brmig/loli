@@ -1,5 +1,5 @@
 ion-button { 
-    @apply px-0 mx-0 w-full h-12 bg-white shadow-lg;
+    @apply px-0 mx-0 w-full h-12 bg-white;
 }
 
 ion-card-title {
@@ -10,6 +10,11 @@ ion-card-title {
     @apply font-semibold text-red-500;
 }
 */
+
+#dynamicBtn {
+    @apply shadow-md !important;
+}
+
 #dynamicBtn ion-icon {
-    @apply mr-2;
+    @apply mt-2 mr-2;
 }

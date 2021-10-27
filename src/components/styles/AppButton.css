@@ -1,0 +1,12 @@
+#appButton ion-button {
+    border-radius: 100px;
+    color: white;
+    font-weight: bold;
+    background: rgb(111,4,4);
+    background: linear-gradient(360deg, rgba(111,4,4,1) 0%, rgba(240,18,29,1) 100%);
+}
+
+#appButton {
+    margin: auto 0 0 0;
+    padding: 0 1em ;
+}

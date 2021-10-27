@@ -1,5 +1,5 @@
 ion-card {
-    @apply h-1/5 m-0 w-full !important;
+    @apply h-1/5 m-0 w-full shadow-md mb-2 !important;
 }
 
 ion-card-header {
